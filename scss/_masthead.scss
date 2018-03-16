@@ -25,12 +25,6 @@ header.masthead {
       @include heading-font;
     }
   }
-  .intro-text-container {
-    background-color: rgba(0,0,0,0.6);
-    padding: 30px;
-    border: 2px solid #fff;
-    border-radius: 50px 0px;
-  }
 }
 @media(min-width:768px) {
   header.masthead {
