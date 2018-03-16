@@ -80,12 +80,12 @@ section {
 
 // Highlight color customization
 ::-moz-selection {
-  background: $primary;
+  background: rgba($primary,0.25);
   text-shadow: none;
 }
 
 ::selection {
-  background: $primary;
+  background: rgba($primary,0.25);
   text-shadow: none;
 }
 
