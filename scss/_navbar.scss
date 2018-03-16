@@ -12,9 +12,18 @@
     @include heading-font;
   }
   .navbar-brand {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 0;
+    padding-right: 10px;
+    border: 2px solid #000;
     color: $favblue;
     font-weight: bold;
-    text-shadow: #000 3px 3px;
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            3px 3px 0 #000;
     @include script-font;
     &.active,
     &:active,
@@ -70,12 +79,20 @@
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
+        background-color: transparent;
+        border: none;
       }
       .navbar-nav {
         .nav-item {
           .nav-link {
             padding: 1.1em 1em !important;
             color: white;
+            &.active {
+              color: $favblue;
+            }
+            &:hover {
+              color: darken($favblue, 10%)
+            }
           }
         }
       }
