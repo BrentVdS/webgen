@@ -12,18 +12,13 @@
     @include heading-font;
   }
   .navbar-brand {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255,0.6);
     border-radius: 10px;
     padding: 0;
-    padding-right: 10px;
+    padding-right: 6px;
     border: 2px solid #000;
     color: $favblue;
     font-weight: bold;
-    text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            3px 3px 0 #000;
     @include script-font;
     &.active,
     &:active,
