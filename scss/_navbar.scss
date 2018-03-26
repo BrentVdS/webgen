@@ -12,27 +12,33 @@
     @include heading-font;
   }
   .navbar-brand {
-    color: $primary;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 10px;
+    padding: 0;
+    padding-right: 6px;
+    border: 2px solid #000;
+    color: $favblue;
+    font-weight: bold;
     @include script-font;
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: darken($favblue, 10%);
     }
   }
   .navbar-nav {
     .nav-item {
       .nav-link {
         font-size: 90%;
-        font-weight: 400;
+        font-weight: bold;
         padding: 0.75em 0;
         letter-spacing: 1px;
         color: white;
         @include heading-font;
         &.active,
         &:hover {
-          color: $primary;
+          color: $favblue;
         }
       }
     }
@@ -57,6 +63,7 @@
       .nav-item {
         .nav-link {
           padding: 1.1em 1em !important;
+          color: $gray-900;
         }
       }
     }
@@ -67,6 +74,22 @@
       .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
+        background-color: transparent;
+        border: none;
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            padding: 1.1em 1em !important;
+            color: white;
+            &.active {
+              color: $favblue;
+            }
+            &:hover {
+              color: darken($favblue, 10%)
+            }
+          }
+        }
       }
     }
   }
