@@ -619,9 +619,15 @@ header.masthead .intro-text-container {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
+  animation-name: verkleuren;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: initial;
+  animation-play-state: running;
+  animation-delay: 2s;
 }
 
 section#contact .section-heading {
@@ -674,6 +680,24 @@ section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@keyframes verkleuren {
+  0% {
+    background-color: #212529;
+  }
+  25% {
+    background-color: #212529;
+  }
+  50% {
+    background-color: #22253e;
+  }
+  75% {
+    background-color: #212529;
+  }
+  100% {
+    background-color: #212529;
+  }
 }
 
 footer {
