@@ -1,7 +1,7 @@
 // Styling for the contact section
 section#contact {
   background-color: $gray-900;
-  background-image: url('../img/map-image.png');
+  //background-image: url('../img/map-image.png');
   background-repeat: no-repeat;
   background-position: center;
   .section-heading {
@@ -46,4 +46,39 @@ section#contact {
     color: $gray-400;
     @include heading-font;
   }
+
+
+
+
+  animation-name: verkleuren;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: initial;
+  animation-play-state: running;
+  animation-delay: 2s;
+
+  @keyframes verkleuren {
+    0% {
+      background-color: $gray-900;
+    }
+
+    25% {
+      background-color: $gray-900;
+    }
+
+    50% {
+      background-color: darken($primary,20%);
+    }
+
+    75% {
+      background-color: $gray-900;
+    }
+
+    100% {
+      background-color: $gray-900;
+    }
+  }
 }
+
+
