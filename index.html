@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
   <head>
 
@@ -38,15 +38,14 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">WebGen</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="blacklogo" src="img/logos/logo_black2.png"><img class="whitelogo" src="img/logos/logo_white2.png"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
+          <i class="fa fa-bars fa-2x"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#services">Diensten</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -377,38 +376,51 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">Contacteer ons</h2>
+            <h3 class="section-subheading text-muted"></h3>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" novalidate>
+            <form id="contactForm" action="contact.php" method="post">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
-                    <p class="help-block text-danger"></p>
+                      <label class="help-block text-info2" for="naam">Naam <sup>*</sup></label>
+                      <input class="form-control" type="text" id="naam" size="15" maxlength="20" name="gebruikersnaam" placeholder="typ hier je naam" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
-                    <p class="help-block text-danger"></p>
+                    <label class="help-block text-info2" for="email">Email <sup>*</sup></label>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="typ hier je email" required>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label  class="help-block text-info2" for="opmerking">Graag hier uw opmerkingen</label>
+                    <textarea class="form-control" rows="5" cols="25" id="opmerking" name="feedback" placeholder="typ hier je opmerkingen"></textarea>
+                    <script>
+                        var textarea = document.querySelector('textarea');
+
+                        textarea.addEventListener('keydown', autosize);
+
+                        function autosize(){
+                            var el = this;
+                            setTimeout(function(){
+                                el.style.cssText = 'height:auto; padding:0';
+                                // for box-sizing other than "content-box" use:
+                                // el.style.cssText = '-moz-box-sizing:content-box';
+                                el.style.cssText = 'height:' + el.scrollHeight + 'px';
+                            },0);
+                        }
+                    </script>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                  <input id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit" value="verzenden">
                 </div>
               </div>
             </form>
@@ -422,7 +434,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; WebGen 2018</span>
+            <span class="copyright">Copyright &copy; WebGen 2018 <img src="favicon.ico"></span>
           </div>
         </div>
       </div>
@@ -643,7 +655,7 @@
 
     <!-- Contact form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!--<script src="js/contact_me.js"></script>-->
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
