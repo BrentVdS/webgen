@@ -112,8 +112,18 @@ img::-moz-selection {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#mainNav .navbar-brand {
-  background-color: rgba(33, 37, 41, 0.8);
+#mainNav .blacklogo {
+  display: none;
+}
+
+#mainNav .whitelogo {
+  display: block;
+  margin-left: 0px;
+  height: 50px;
+}
+
+#mainNav .navbar-brand, #mainNav .navbar-brand2 {
+  text-decoration: none;
   border-radius: 10px;
   padding: 10px;
   padding-right: 16px;
@@ -123,11 +133,17 @@ img::-moz-selection {
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover, #mainNav .navbar-brand2.active, #mainNav .navbar-brand2:active, #mainNav .navbar-brand2:focus, #mainNav .navbar-brand2:hover {
   color: #0000cc;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav .navbar-brand2 {
+  font-size: 1.5em;
+  padding: 3px;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link, #mainNav .navbar-nav .nav-item .nav-link2 {
+  text-decoration: none;
   font-size: 100%;
   font-weight: bold;
   padding: 0.75em 0;
@@ -136,7 +152,7 @@ img::-moz-selection {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link2.active, #mainNav .navbar-nav .nav-item .nav-link2:hover {
   color: #00f;
 }
 
@@ -150,35 +166,57 @@ img::-moz-selection {
     border: none;
     background-color: transparent;
   }
-  #mainNav .navbar-brand {
+  #mainNav .navbar-brand, #mainNav .navbar-brand2 {
     font-size: 1.75em;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
+  #mainNav .whitelogo {
+    display: none;
+  }
+  #mainNav .blacklogo, #mainNav .navbar-brand2 .whitelogo {
+    display: block;
+    margin-left: 100px;
+    height: 90px;
+  }
+  #mainNav .navbar-brand2 {
+    font-size: 3em;
+  }
   #mainNav .navbar-nav .nav-item .nav-link {
-    padding: 1.1em 1em !important;
     color: #212529;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link, #mainNav .navbar-nav .nav-item .nav-link2 {
+    padding: 1.1em 1em !important;
+    text-decoration: none;
   }
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
   }
-  #mainNav.navbar-shrink .navbar-brand {
+  #mainNav.navbar-shrink .whitelogo {
+    display: block;
+    height: 50px;
+    margin-left: 0px;
+  }
+  #mainNav.navbar-shrink .blacklogo {
+    display: none;
+  }
+  #mainNav.navbar-shrink .navbar-brand, #mainNav.navbar-shrink .navbar-brand2 {
     font-size: 1.25em;
     padding: 12px 0;
     background-color: transparent;
     border: none;
   }
-  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link, #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link2 {
     padding: 1.1em 1em !important;
     color: white;
   }
-  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link.active {
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link.active, #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link2.active {
     color: #00f;
   }
-  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+  #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover, #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link2:hover {
     color: #0000cc;
   }
 }
@@ -619,8 +657,10 @@ header.masthead .intro-text-container {
 
 section#contact {
   background-color: #212529;
+  background-image: url("../img/contact2.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   animation-name: verkleuren;
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
@@ -682,9 +722,14 @@ section#contact :-ms-input-placeholder {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+section#contact .text-info2 {
+  color: #777eb5;
+  font-weight: bold;
+}
+
 @keyframes verkleuren {
   0% {
-    background-color: #212529;
+    background-color: black;
   }
   25% {
     background-color: #212529;
@@ -696,8 +741,97 @@ section#contact :-ms-input-placeholder {
     background-color: #212529;
   }
   100% {
+    background-color: black;
+  }
+}
+
+section#contact textarea {
+  background-color: transparent;
+  color: white;
+  border-color: #adb5bd;
+  min-height: 240px;
+  resize: none;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+
+section#contact .form-control {
+  background-color: transparent;
+  color: white;
+  border-radius: 40px;
+}
+
+section#contact input:valid.form-control {
+  border-color: #adb5bd;
+}
+
+section#contact input:invalid.form-control {
+  border: 1px solid #ff3d3d;
+}
+
+.contactreplybody {
+  background-color: black;
+  color: white;
+  background-image: url("../img/contact2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  animation-name: verkleuren;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: initial;
+  animation-play-state: running;
+  animation-delay: 2s;
+}
+
+@keyframes verkleuren {
+  0% {
+    background-color: black;
+  }
+  25% {
     background-color: #212529;
   }
+  50% {
+    background-color: #22253e;
+  }
+  75% {
+    background-color: #212529;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.contactreplyOutput {
+  position: relative;
+  top: 150px;
+}
+
+.bedankt {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.bedankth1 {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 50px;
+}
+
+.bedanktp {
+  font-weight: normal;
+}
+
+.output {
+  width: 80%;
+  margin: auto;
+}
+
+.output .tekst {
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 footer {

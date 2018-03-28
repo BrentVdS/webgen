@@ -11,8 +11,16 @@
     background-color: $primary;
     @include heading-font;
   }
-  .navbar-brand {
-    background-color: rgba($gray-900,0.8);
+  .blacklogo {
+    display: none;
+  }
+  .whitelogo {
+    display: block;
+    margin-left: 0px;
+    height: 50px;
+  }
+  .navbar-brand, .navbar-brand2 {
+    text-decoration: none;
     border-radius: 10px;
     padding: 10px;
     padding-right: 16px;
@@ -27,9 +35,14 @@
       color: darken($favblue, 10%);
     }
   }
+  .navbar-brand2 {
+    font-size: 1.5em;
+    padding: 3px;
+  }
   .navbar-nav {
     .nav-item {
-      .nav-link {
+      .nav-link, .nav-link2 {
+        text-decoration: none;
         font-size: 100%;
         font-weight: bold;
         padding: 0.75em 0;
@@ -53,17 +66,32 @@
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
-    .navbar-brand {
+    .navbar-brand, .navbar-brand2 {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
     }
+    .whitelogo {
+      display: none;
+    }
+    .blacklogo, .navbar-brand2 .whitelogo{
+      //background-color: rgba($gray-900,0.8);
+      display: block;
+      margin-left: 100px;
+      height: 90px;
+    }
+    .navbar-brand2 {
+      font-size: 3em;
+    }
     .navbar-nav {
       .nav-item {
         .nav-link {
-          padding: 1.1em 1em !important;
           color: $gray-900;
+        }
+        .nav-link, .nav-link2 {
+          padding: 1.1em 1em !important;
+          text-decoration: none;
         }
       }
     }
@@ -71,7 +99,15 @@
       padding-top: 0;
       padding-bottom: 0;
       background-color: $gray-900;
-      .navbar-brand {
+      .whitelogo {
+        display: block;
+        height: 50px;
+        margin-left: 0px;
+      }
+      .blacklogo {
+         display: none;
+       }
+      .navbar-brand, .navbar-brand2 {
         font-size: 1.25em;
         padding: 12px 0;
         background-color: transparent;
@@ -79,7 +115,7 @@
       }
       .navbar-nav {
         .nav-item {
-          .nav-link {
+          .nav-link, .nav-link2 {
             padding: 1.1em 1em !important;
             color: white;
             &.active {
