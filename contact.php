@@ -48,13 +48,10 @@
               <a class="nav-link2 js-scroll-trigger" href="./index.html#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link2 js-scroll-trigger" href="./index.html#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link2 js-scroll-trigger" href="./index.html#about">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link2 js-scroll-trigger" href="./index.html#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link2 js-scroll-trigger" href="./index.html#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link2 js-scroll-trigger" href="./index.html#contact">Contact</a>
@@ -78,27 +75,7 @@
                     if (isset($_POST["feedback"]) && $_POST["feedback"] != "") {
                     			echo '<li>Opmerking:</li><div class="tekst">' . $_POST["feedback"] . '</div>';
                     }
-                    // Check for empty fields
-                    if(empty($_POST['gebruikersnaam'])      ||
-                       empty($_POST['email'])     ||
-                       !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-                       {
-                       echo "<p><br>Dit is geen valide email adres</p>";
-                       return false;
-                       }
-
-                    $name = strip_tags(htmlspecialchars($_POST['gebruikersnaam']));
-                    $email_address = strip_tags(htmlspecialchars($_POST['email']));
-                    $message = strip_tags(htmlspecialchars($_POST['feedback']));
-
-                    // Create the email and send the message
-                    $to = 'robbe.baeyens@outlook.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-                    $email_subject = "Website Contact Form:  $name";
-                    $email_body = "Je hebt een nieuw bericht van je website form.\n\n"."Dit was ingevuld:\n\nNaam: $name\n\nEmail: $email_address\n\nOpmerking:\n$message";
-                    $headers = "From: noreply@webgen.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-                    $headers .= "Reply-To: $email_address";
-                    mail($to,$email_subject,$email_body,$headers);
-                    return true;
+                    
                 ?>
             </ul>
         </div>
