@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link2 js-scroll-trigger" href="./index.html#services">Services</a>
+              <a class="nav-link2 js-scroll-trigger" href="./index.html#services">Diensten</a>
             </li>
             <li class="nav-item">
               <a class="nav-link2 js-scroll-trigger" href="./index.html#team">Team</a>
@@ -82,11 +82,11 @@
     </div>
 
         <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
 
         <!-- Plugin JavaScript -->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="js/jquery.easing.min.js"></script>
 
         <!-- Contact form JavaScript -->
         <script src="js/jqBootstrapValidation.js"></script>
