@@ -48,10 +48,13 @@
               <a class="nav-link2 js-scroll-trigger" href="./index.html#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link2 js-scroll-trigger" href="./index.html#team">Team</a>
+              <a class="nav-link2 js-scroll-trigger" href="./index.html#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link2 js-scroll-trigger" href="./index.html#portfolio">Portfolio</a>
+              <a class="nav-link2 js-scroll-trigger" href="./index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link2 js-scroll-trigger" href="./index.html#team">Team</a>
             </li>
             <li class="nav-item">
               <a class="nav-link2 js-scroll-trigger" href="./index.html#contact">Contact</a>
@@ -75,7 +78,6 @@
                     if (isset($_POST["feedback"]) && $_POST["feedback"] != "") {
                     			echo '<li>Opmerking:</li><div class="tekst">' . $_POST["feedback"] . '</div>';
                     }
-                    
                 ?>
             </ul>
         </div>
